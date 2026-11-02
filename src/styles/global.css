@@ -1,0 +1,72 @@
+@layer reset, tokens, base, prose, components, page, utilities;
+
+@import "./reset.css" layer(reset);
+@import "./tokens.css" layer(tokens);
+@import "./prose.css" layer(prose);
+@import "./utilities.css" layer(utilities);
+
+/*base reprend tous les styles par défaut des balises natives(body, a, code, etc.), en utilisant les variables définies dans tokens.css*/
+@layer base {
+  html {
+    font-family: var(--font-atk-hyper);
+    line-height: var(--leading-normal);
+    color: var(--color-text-primary);
+  }
+
+  main {
+    min-height: 50%;
+    margin-left: var(--space-2xs);
+    margin-right: var(--space-2xs);
+  }
+
+  p,
+  li,
+  dd,
+  figcaption {
+    line-height: var(--leading-normal);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: var(--leading-tight);
+    color: var(--color-text-primary);
+  }
+
+  a {
+    color: var(--color-link);
+  }
+
+  a:visited {
+    color: var(--color-link-visited);
+  }
+
+  body {
+    background-color: var(--color-bg-canvas);
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    img {
+      height: 2.5rem;
+      width: auto;
+      max-width: 100%;
+    }
+  }
+  footer {
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .mentions-legales {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
