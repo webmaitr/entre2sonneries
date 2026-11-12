@@ -5,8 +5,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro'
 const allCourses = (await getCollection('sequence'));
 ---
 <BaseLayout title="Sequences">
-<h1>Mes cours</h1>
-<ul>
+<h1>Les parcours pédagogiques</h1>
+<p>bientôt...</p>
+<!-- <ul>
 	{allCourses.map((cours) => <li><a href={`/sequences/${cours.id}`}>{cours.data.title}</a></li>)}
-</ul>
+</ul> -->
 </BaseLayout>

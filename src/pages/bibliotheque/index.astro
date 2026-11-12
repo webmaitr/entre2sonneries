@@ -1,0 +1,13 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro'
+
+const allNotes = (await getCollection('biblio'));
+---
+<BaseLayout title="bibliotheque">
+<h1>La bibliothèque</h1>
+
+<ul>
+	{allNotes.map((note) => <li><a href={`/bibliotheque/${note.id}`}>{note.data.title}</a></li>)}
+</ul>
+</BaseLayout>

@@ -2,28 +2,41 @@
 const navLinks = [
   {href: '/', label: 'Accueil'},
   {href: '/a-propos', label: 'À propos'},
-  {href: '/services', label: 'Services'},
+  {href: '/bibliotheque', label: 'Hub info'},
   {href: '/blog', label: 'Blog'},
-  {href: '/sequences', label: 'Parcours'},
+  // {href: '/sequences', label: 'Parcours'},
+  // {href: '/services', label: 'Services'},
   {href: '/contact', label: 'Contact'},
 ]
 
 ---
-<button class="hamburger" aria-label="Menu principal" aria-expanded="false" aria-controls="nav-menu">
-  <span class="bar"></span>
-  <span class="bar"></span>
-  <span class="bar"></span>
-</button>
+<div class="top-navigation">
+  <select class="mon-quartier">
+    <option>
+      Mon quartier
+    </option>
+    <option>Colombier</option>
+  </select>
+  <a class="button-primary" href="https://openagenda.com/entre2sonneries-club-parentalite-rennes-colombier" target="_blank">
+    openagenda
+  </a>
+  <button class="hamburger" aria-label="Menu principal" aria-expanded="false" aria-controls="nav-menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
 
-<nav id="nav-menu" class="nav-links">
-  <ul role="list">
-        {navLinks.map((link) => (
-          <li>
-            <a href={link.href}>{link.label}</a>
-          </li>
-        ))}
-      </ul>
-</nav>
+  <nav id="nav-menu" class="nav-links">
+    <ul role="list">
+          {navLinks.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))}
+        </ul>
+  </nav>
+</div>
+
 
 <script>
   function setupNav() {
@@ -56,26 +69,40 @@ const navLinks = [
 
 <style>
   @layer components {
+    .top-navigation {
+      display: flex;
+      gap: var(--space-lg);
+      align-items: center;
+      .mon-quartier {
+        background-color: unset;
+        padding: 0 var(--space-sm);
+        option {
+          color: black;
+        }
+      }
+    }
     .hamburger {
       display: flex;
-
       background: none;
       border: none;
       cursor: pointer;
       padding: 0.5rem;
       flex-direction: column;
+      justify-content: center;
       gap: 5px;
     }
 
     .nav-links {
       display: none;
       position: absolute;
-      top: 50px;
+      top: 150px;
       /* left: 0; */
       right: 0;
       background-color: #ffffff;
       border-bottom: 1px solid #e5e7eb;
       padding: 1.5rem;
+      margin-left: auto;
+      margin-right: 4vw;
     }
 
     .nav-links.active {
@@ -103,7 +130,7 @@ const navLinks = [
       display: block;
       width: 24px;
       height: 2px;
-      background-color: #111827;
+      background-color: var(--color-text-primary);
       transition: transform 0.25s ease, opacity 0.25s ease;
     }
 

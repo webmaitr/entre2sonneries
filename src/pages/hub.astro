@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="hall">
+
+<h1>Entre deux sonneries</h1>
+<p>Vous êtes sur le site web du club parent de l'association Agropunk.</p>
+<section class="point-important">
+  <p><span>Point important 1 : </span>Internet, c'est bien. Mais se parlez en vrai, c'est beaucoup mieux. Vous trouverez toutes les infos de nos moments de rencontre sur l'openagenda.</p>
+<a class="button-primary" href="https://openagenda.com/entre2sonneries-club-parentalite-rennes-colombier" target="_blank">
+    openagenda
+</a>
+<p><span>Point important 2 : </span>Ce site est fait pour vous - parents. Nous comptons sur vous pour nous dire ce dont vous avez besoin, ou envie, pour suggérer des améliorations, pour développer l'entraide. Vous pouvez comptez sur nous pour vous écouter attentivement et faire tout ce qui est possible de faire pour vous satisfaire.</p>
+<a class="button-primary" href="/contact">
+    messagerie
+</a>
+</section>
+<section class="section-resume">
+<p>Actuellement nous pouvons déjà  proposer :</p>
+<article class="biblio">
+<h2>Notre bibliothèque</h2>
+<p>C'est une collection vivante de ressources pratiques, d'informations, conseils et bons plans trouvés par des parents pour les parents et vérifiées par les parents.</p>
+<p>Les grands thèmes à ce jour sont :</p>
+
+<ul role="list">
+  <li><a class="button-primary" href="/bibliotheque">
+    Démarches administratives
+</a></li>
+  <li><a class="button-primary" href="/bibliotheque">
+    Santé et pédiatrie
+</a></li>
+  <li><a class="button-primary" href="/bibliotheque">
+    Garde d'enfants et logistique
+</a></li>
+  <li><a class="button-primary" href="/bibliotheque">
+    Activités et loisirs
+</a></li>
+  <li><a class="button-primary" href="/bibliotheque">
+    Bonnes adresses pratiques
+</a></li>
+</ul>
+</article>
+<article class="speciaux">
+<h2>Nos contenus spéciaux</h2>
+<p>Podcast, newsletter, fiches pratiques et guides</p>
+<ul role="list">
+  <li><a class="button-primary" href="/podcast">
+    Podcast
+</a></li>
+  <li><a class="button-primary" href="/newsletter">
+    Newsletters
+</a></li>
+  <li><a class="button-primary" href="/fiches">
+    Fiches pratiques
+</a></li>
+  <li><a class="button-primary" href="/guides">
+    Guides
+</a></li>
+</ul>
+</article>
+<h2>Notre espace participatif</h2>
+<p>Une expérience citoyenne et collective</p>
+</section>
+</BaseLayout>
+
+<style>
+  @layer page {
+    h1 + p { 
+      text-align: center;
+    }
+    .point-important {
+      display: grid;
+      grid-template-row: repeat(4, 1fr);
+      margin-bottom: var(--space-lg);
+      p {
+        margin: var(--space-sm);
+        span {
+          font-weight: 700;
+        }
+      }
+      .button-primary {
+        justify-self: right;
+        margin-right: var(--space-xl);
+        min-width: 120px;
+        text-align: center;
+      }
+    }
+    .section-resume {
+      p:first-child {
+        text-align:center;
+      }
+      h2 + p {
+        margin-left: var(--space-sm);
+        margin-bottom: var(--space-sm);
+      }
+      .biblio {   
+        ul {
+          display: flex;
+          flex-direction:column;
+          align-items: center;
+          gap: var(--space-md);
+          margin-top: var(--space-sm);
+          margin-right: var(--space-2xl)
+        }
+      }
+      .speciaux {
+        ul {
+          display: grid;
+          grid-template: 1fr 1fr / 1fr 1fr;
+          max-width: 85%;
+          gap: var(--space-md);
+          justify-items: center;
+        }
+      }
+    }
+  }
+</style>

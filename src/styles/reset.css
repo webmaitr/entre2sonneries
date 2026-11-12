@@ -1,3 +1,4 @@
+
 /* 1. Box-sizing universel et plus intuitif */
 *,
 *::before,
@@ -78,6 +79,11 @@ ol[role='list'] {
   list-style: none;
 }
 
+ul, ol {
+  padding-left: 0.5em;
+  margin-left: 0.5em;
+}
+
 /* 8. Gestion des titres et des césures */
 h1,
 h2,
@@ -86,7 +92,7 @@ h4,
 h5,
 h6 {
   text-wrap: balance; /* Évite les mots isolés en fin de ligne */
-  margin-top: 1.5em;
+  margin-top: 1em;
   margin-bottom: 0.5em;
 }
 

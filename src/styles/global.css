@@ -1,4 +1,4 @@
-@layer reset, tokens, base, prose, components, page, utilities;
+/* @layer reset, tokens, base, prose, components, page, utilities; */
 
 @import "./reset.css" layer(reset);
 @import "./tokens.css" layer(tokens);
@@ -15,8 +15,11 @@
 
   main {
     min-height: 50%;
-    margin-left: var(--space-2xs);
-    margin-right: var(--space-2xs);
+    padding-left: var(--space-2xs);
+    padding-right: var(--space-2xs);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   p,
@@ -36,6 +39,10 @@
     color: var(--color-text-primary);
   }
 
+  h1 {
+    text-align: center;
+  }
+
   a {
     color: var(--color-link);
   }
@@ -49,10 +56,7 @@
   }
 
   header {
-    display: flex;
-    align-items: center;
     padding: 10px;
-    gap: 10px;
     img {
       height: 2.5rem;
       width: auto;
@@ -68,5 +72,29 @@
       display: flex;
       flex-direction: column;
     }
+  }
+  .button-primary {
+    display: inline-block;
+    text-decoration: none;
+    align-content: center;
+    border-radius: var(--radius-sm);
+    padding: 0 var(--space-sm);
+    color: var(--color-bg-canvas);
+    background-color: var(--color-text-primary);
+  }
+  .button-primary:visited {
+    color: var(--color-bg-canvas);
+  }
+  .button-empty {
+    display: inline-block;
+    text-decoration: none;
+    align-content: center;
+    border-radius: var(--radius-sm);
+    padding: 0 var(--space-sm);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-text-primary);
+  }
+  .button-empty:visited {
+    color: var(--color-text-primary);
   }
 }

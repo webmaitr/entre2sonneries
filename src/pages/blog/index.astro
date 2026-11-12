@@ -4,9 +4,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro'
 
 const allPosts = (await getCollection('blog'));
 ---
-<BaseLayout title="Blog">
-<h1>Mon blog</h1>
-<ul>
+<BaseLayout title="blog">
+<h1>Les nouvelles du projet</h1>
+<p>bientôt...</p>
+<!-- <ul>
 	{allPosts.map((post) => <li><a href={`/blog/${post.id}`}>{post.data.title} + {post.id}</a></li>)}
-</ul>
+</ul> -->
 </BaseLayout>

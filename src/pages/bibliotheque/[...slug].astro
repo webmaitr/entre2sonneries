@@ -1,0 +1,21 @@
+---
+import {getCollection, render} from 'astro:content';
+import CourseLayout from '../../layouts/CourseLayout.astro';
+
+
+export async function getStaticPaths() {
+	const notes = await getCollection('biblio');
+	return notes.map(note => ({
+		params: { slug: note.id },
+		props: {note},
+	}));
+}
+
+const {note} = Astro.props;
+const {Content} = await render(note);
+---
+
+<CourseLayout frontmatter={note.data}>
+  <h1>{note.data.title}</h1>
+<Content />
+</CourseLayout>

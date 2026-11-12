@@ -6,7 +6,37 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Services">
-	<h1>Mon grand titre test</h1>
-	<h2>Titre secondaire test</h2>
-	<p>paragraphe test</p>
+	<h1>Services divers</h1>
+	<section class="abonnement">
+	<h2>Pour soutenir le lancement du projet</h2>
+	<p>Le projet <em>Entre deux sonneries</em> est une partie d'un vaste programme d'innovation sociale, qui veut <strong>refaire le monde en partant d'en bas</strong> (le fondateur est à la fois bac+5 et père de famille en situation de précarité), sans devoir choisir entre tout brûler ou voter pour l'un ou l'autre extrême, qui nous aura oublié jusqu'à la prochaine élection.</p>
+	<p>Nous vous proposons un <strong>abonnement solidaire de lancement</strong>, qui vous donnera bientôt accès - outre les dispositifs pédagogiques qui se construisent - à des contenus exclusifs et quelques privilèges qui restent à inventer (qui seront humbles, mais qui sauront vous faire plaisir).</p>
+	<p>Plus important encore, en vous abonnant, <strong>vous financez la prise en charge pédagogique d'une personne qui n'en a pas les moyens</strong> : vous devenez parrain - marraine solidaire.</p>
+	<p class="warning">Notez bien qu'il ne s'agit pas d'un appel au don (les réductions d'impôt liées aux dons aux associations sont aussi un poids pour le budget publique).<br>Nous vous demandons une vraie preuve d'engagement, pour soutenir un père en galère qui cherche des solutions originales (celles qui n'arrivent pas d'en haut !).</p>
+	<p>C'est mieux qu'un chèque qui va encore aller dans un bureau parisien. <strong>Et vous pouvez l'arrêter quand vous voulez.</strong></p>
+	<p>Osez la nouveauté ! Tentons l'impossible !</p>
+	<a class="button-primary" href="https://buy.stripe.com/3cI8wO4X4bhyeJs7X4bwk00" target="_blank">Je soutiens l'initiative</a>
+	<p>(lien vers Stripe pour un paiement sécurisé)</p>
+	<p>Merci d'avance.</p>
+</section>
 </BaseLayout>
+
+<style>
+	@layer page{
+		.abonnement {
+			padding : 0 var(--space-md);
+			p {
+				margin-bottom: var(--space-xs);
+			}
+			.button-primary {
+				display: block;
+				max-width:fit-content;
+				margin-left: auto;
+				margin-right: auto;
+				&+ p {
+					text-align: center;
+				}
+			}
+		}
+	}
+</style>

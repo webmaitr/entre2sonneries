@@ -6,6 +6,7 @@ author: 'Laurent Van Reeth'
 heroImage: 
   url: '../../assets/blog-placeholder-1.jpg'
   alt: 'un text alternatif'
+category: 'news du projet'
 tags: ["tag1", "tag2", "tag3"]
 ---
 

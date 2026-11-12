@@ -1,10 +1,8 @@
-// export const site_title = 'NomDuSite';
-// export const site_slogan = 'Le slogan du site';
 
 export const site = 
-  {title: 'NomDuSite',
-    url: 'https://NomDuSite',
-    slogan: 'Le slogan du site',
+  {title: 'Entre deux sonneries',
+    url: 'https://entredeuxsonneries.fr',
+    slogan: 'club parentalité',
     editeur: 'The trou de ver',
     formeJuridique: 'Société par actions simplifiée unipersonnelle',
     juridic : 'SASU',
@@ -20,3 +18,6 @@ export const site =
     position: 'président',
   }
 
+export const categories = [
+  "Démarches administratives","Santé et pédiatrie", "Garde d'enfants et logistique", "Activités et loisirs", "Bonnes adresses pratiques"
+]
