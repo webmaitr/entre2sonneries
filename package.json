@@ -12,7 +12,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^7.4.4"
+    "astro": "^7.4.4",
+    "vanilla-cookieconsent": "^3.3.0"
   },
   "allowScripts": {
     "esbuild": true

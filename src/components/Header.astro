@@ -1,10 +1,11 @@
 ---
-import {site} from '../consts'
-import Navigation from './Navigation.astro'
-
+import {site} from '../consts';
+import Navigation from './Navigation.astro';
+import SocialLinks from './SocialLinks.astro';
 ---
 
 <header>
+  <SocialLinks />
   <div class="sonneries">
     <a href="/">
       <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 64 63"><path fill="currentColor" d="M43.894 53.824v1.012c0 4.497-3.412 8.051-7.485 8.051H17.117c-4.072 0-7.485-3.554-7.485-8.051v-5.733q.002-.851.158-1.651C3.813 42.542-.001 35.095-.001 26.763c0-14.771 11.992-26.764 26.764-26.764s26.764 11.992 26.764 26.764c0 8.331-3.814 15.779-9.791 20.689q.156.8.158 1.651v.595c7.653-.64 13.776-6.288 13.776-12.4a2.058 2.058 0 0 1 4.114 0c0 8.026-7.817 15.837-17.891 16.526Zm-30.146-3.673v4.686c0 2.12 1.45 3.936 3.37 3.936H36.41c1.92 0 3.37-1.816 3.37-3.936v-4.686a26.6 26.6 0 0 1-13.016 3.377 26.6 26.6 0 0 1-13.016-3.377m26.409-5.126c5.611-4.124 9.256-10.77 9.256-18.261 0-12.5-10.149-22.649-22.649-22.649S4.115 14.264 4.115 26.764c0 7.491 3.645 14.137 9.256 18.261a22.54 22.54 0 0 0 13.393 4.388c5.009 0 9.641-1.63 13.393-4.388"/><path fill="#ee0707" d="M22.599 27.122 6.801 29.555C5.137 18.748 12.724 8.611 23.748 6.913c11.017-1.697 21.311 5.694 22.975 16.494a19.55 19.55 0 0 1-2.443 12.814l-13.198-7.338a4.515 4.515 0 0 0-3.985-6.632 4.515 4.515 0 0 0-4.499 4.871Z"/><path fill="currentColor" d="M26.764 19.555a6.16 6.16 0 0 1 6.159 6.159 6.16 6.16 0 0 1-6.159 6.159 6.16 6.16 0 0 1-6.159-6.159 6.16 6.16 0 0 1 6.159-6.159m0 3.292a2.87 2.87 0 0 0-2.867 2.867 2.87 2.87 0 0 0 2.867 2.867 2.87 2.87 0 0 0 2.867-2.867 2.87 2.87 0 0 0-2.867-2.867"/><circle fill="currentColor" cx="59.728" cy="33.667" r="3.632"/><path fill="currentColor" d="m13.328 20.125 9.257 1.706-1.683 3.883z"/></svg>
@@ -18,7 +19,7 @@ import Navigation from './Navigation.astro'
     </a>
   </div>
   <Navigation />
-
+  
 </header>
 
 <style>
@@ -26,7 +27,11 @@ import Navigation from './Navigation.astro'
     header {
       border-bottom: 1px solid var(--color-border);
       padding: 10px;
-      
+      .social-links {
+        justify-content: right;
+        margin-bottom: var(--space-md);
+        border-bottom: 1px solid var(--color-border);
+      }
       .sonneries {
         margin-bottom: var(--space-md);
         flex: 1;

@@ -1,8 +1,8 @@
 ---
-
+import SocialLinks from './SocialLinks.astro';
 ---
 <footer>
-  <div></div>
+  <div class="footer-container">
   <div></div>
 <div class="mentions-legales">
 <a href="../mentions_legales">Mentions Légales</a>
@@ -10,16 +10,43 @@
 <a href="../cgv">Conditions Générales de Vente</a>
 <a href="../rgpd">Politique de Confidentialité</a>
 </div>
+<div class="footer-buttons">
+  <div><a class="button-primary" href="https://buy.stripe.com/3cI8wO4X4bhyeJs7X4bwk00" target="_blank" rel="noopener noreferrer">Je soutiens l'initiative &#8599;</a>
+	<p>(lien vers Stripe pour un paiement sécurisé)</p>
+	<p>Merci d'avance.</p></div>
+  <a class="button-primary" data-cc="show-preferencesModal">Gestions des cookies</a></div>
+</div>
+<SocialLinks />
 </footer>
 
 <style>
   @layer components {
     footer {
       border-top: 1px solid var(--color-border);
-      flex-direction: column;
-      gap: var(--space-sm);
-      .mentions-legales {
+      .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-sm);
+        margin-top: var(--space-md);
+        .mentions-legales {
+          text-align: center;
+        }
+        @media screen and (min-width: 850px) {
+          flex-direction: row;
+          justify-content: space-around;
+        }
+      }
+      .footer-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
+        gap: var(--space-md);
+      }
+      .social-links {
+        justify-content: center;
+        margin: var(--space-md);
       }
     }
   }

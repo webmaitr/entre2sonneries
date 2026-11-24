@@ -6,6 +6,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Accueil">
+	<div class="main-container">
+
+	
 	<section class="top-accueil">
 		<hgroup>
 			<h1>Quand les enfants sont enfin à l'école...</h1>
@@ -13,7 +16,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		</hgroup>
 		<div class="quick-links">
 			<div class="podcast-link">
-<a  href="/podcast">
+			<a  href="/podcast">
 				<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" clip-rule="evenodd" viewBox="0 0 91 90">
 		<clipPath id="a">
 			<path d="m89.153-15.472 17.845 102.596L4.402 104.969-13.443 2.373z"/>
@@ -26,7 +29,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			</a>
 			</div>
 			<div class="quick-menu">
-				<a class="button-primary" href="/services">Nous soutenir</a>
+				<a class="button-primary" href="/a-propos">C'est quoi ?</a>
 				<a class="button-primary" href="/bibliotheque/">Bibliothèque</a>
 				<a class="button-primary">Bons plans</a>
 			</div>
@@ -45,6 +48,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			<div class="accroche">
 				<p>super-parent<br>cherche<br>solidarité</p>
 				<a class="button-empty" href="/hub">Entrez</a>
+				<div><a href="https://buy.stripe.com/3cI8wO4X4bhyeJs7X4bwk00" target="_blank" rel="noopener noreferrer">Soutenir l'initiative &#8599;</a></div>
 			</div>
 			
 		</div>
@@ -54,14 +58,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </svg>
 		</div>
 	</section>
+	<section class="side-content">
 
+	</section>
+</div>
 </BaseLayout>
 
 <style>
 	@layer page {
+		.main-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			@media screen and (min-width: 750px) {
+				flex-direction: row;
+			}
+		}
 		.top-accueil {
 			hgroup {
-				max-width: 400px;
 				margin: 0 auto 30px;
 				h1 {
 					margin-top: var(--space-md);
@@ -73,13 +88,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			}
 			.quick-links {
 				display: flex;
-				justify-content: space-between;
-				margin-left: var(--space-xl);
-				margin-top: var(--space-xl);
-				margin-right: var(--space-md);
+				justify-content: space-around;
+				gap: 5vw;
 				.podcast-link {
 					width: 25vw;
-					max-width: 100px;
+					max-width: 120px;
 					.podcast-name {
 						stroke: var(--color-text-primary);
 						fill: var(--color-text-primary);
@@ -97,7 +110,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 					margin-right: 40px;
 					.button-primary {
 						width: 40vw;
-						max-width: 200px;
+						max-width: 170px;
 					}
 				}
 			}
